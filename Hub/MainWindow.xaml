@@ -1,0 +1,104 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        
+    xmlns:av="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="av" x:Class="Hub.MainWindow"
+        
+    WindowStyle="None" 
+    Title="gLAsNik" 
+    Height="550" 
+    Width="900"
+    ResizeMode="NoResize"
+        
+    WindowStartupLocation="CenterScreen"
+        
+    MouseDown="Window_MouseDown">
+
+    <Border BorderThickness="1" 
+            BorderBrush="#405A6A">
+
+        <Grid Background="#FFFFFF" Height="550">
+            <Grid Height="150" VerticalAlignment="Top">
+                <TextBlock Text="gLAsNik"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    FontSize="32"
+                    FontWeight="Light"
+                    Foreground="#000" Margin="25,30,0,0" Width="192"/>
+                <Border Background="#1a2630" 
+                        CornerRadius="10" 
+                        Padding="20,15"
+                        Width="300"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Top"
+                        Margin="0,90,573,0">
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Width="10"
+                                Height="10" 
+                                Fill="#007AFF" 
+                                Margin="0,0,10,0"
+                                VerticalAlignment="Center"/>
+                        <TextBlock x:Name="StatusText" 
+                                 Text="Dobrodošli!"
+                                 Foreground="White"
+                                 FontFamily="Consolas"
+                                 FontSize="12"
+                                 VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+                <Button Content="✕" 
+                    Click="ExitButton_Click"
+                    Width="42" Height="42"
+                    FontSize="14"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Margin="0,20,20,0"
+                    Grid.Column="1"
+                    Style="{StaticResource ButtonStyle}"/>
+                <Button Content="—"
+                    Click="MinimizeButton_Click"
+                    Width="42" Height="42"
+                    FontSize="14"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Margin="0,20,62,0"
+                    Style="{StaticResource ButtonStyle}"/>
+            </Grid>
+
+            <Grid VerticalAlignment="Top" 
+                      Margin="0,200,0,0">
+                <StackPanel Margin="0,-1,0,0" >
+
+                    <Button x:Name="ClientButton"
+                            Content="KLIJENT"
+                            Click="ClientButton_Click"
+                            Background="#0b132b"
+                            Foreground="White"
+                            Style="{StaticResource ButtonStyle}" 
+                            Width="450" Height="70"/>
+
+                    <Button x:Name="ServerButton"
+                            Content="POSLUŽITELJ"
+                            Click="ServerButton_Click"
+                            Background="#1c2541"
+                            Foreground="White"
+                            Style="{StaticResource ButtonStyle}"
+                            Margin="0,15,0,0"
+                            Width="450" Height="70"/>
+
+                    <Button x:Name="AboutButton"
+                            Content="O PROJEKTU"
+                            Click="AboutButton_Click"
+                            Background="#3a506b"
+                            Foreground="White"
+                            Style="{StaticResource ButtonStyle}"
+                            Margin="0,15,0,0"
+                            Width="450" Height="70"/>
+
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

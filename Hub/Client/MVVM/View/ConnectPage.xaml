@@ -1,0 +1,108 @@
+﻿<Page x:Class="Hub.ConnectPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:Hub"
+    xmlns:viewmodel="clr-namespace:Hub.Client.MVVM.ViewModel"
+    mc:Ignorable="d" 
+    Title="gLAsNik"
+    Height="550" 
+    Width="900">
+
+    <Page.DataContext>
+        <viewmodel:ClientViewModel />
+    </Page.DataContext>
+    
+    
+    <Border BorderThickness="1" 
+        BorderBrush="#405A6A">
+        <Grid Background="#FFFFFF" Height="550">
+            <Grid Height="150" VerticalAlignment="Top">
+                <TextBlock Text="gLAsNik"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    FontSize="32"
+                    FontWeight="Light"
+                    Foreground="#000" Margin="25,30,0,0" Width="192"/>
+                <Border Background="#1a2630" 
+                        CornerRadius="10" 
+                        Padding="20,15"
+                        Width="300"
+                        VerticalAlignment="Top"
+                        Margin="25,90,573,0">
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse   
+                            Width="10"
+                            Height="10" 
+                            Fill="{Binding StatusColor}"
+                            Margin="0,0,10,0"
+                            VerticalAlignment="Center"/>
+                        <TextBlock
+                            Text="{Binding StatusMessage}"
+                            Foreground="White"
+                            FontFamily="Consolas"
+                            FontSize="12"
+                            VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+                <Button Content="✕" 
+                    Click="ExitButton_Click"
+                    Width="42" Height="42"
+                    FontSize="14"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Margin="0,20,20,0"
+                    Grid.Column="1"
+                    Style="{StaticResource ButtonStyle}"/>
+                <Button Content="&lt;"
+                    Click="BackButton_Click"
+                    Width="42" Height="42"
+                    FontSize="14"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Margin="0,20,62,0"
+                    Style="{StaticResource ButtonStyle}"/>
+                <Button Content="—"
+                    Click="MinimizeButton_Click"
+                    Width="42" Height="42"
+                    FontSize="14"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Margin="0,20,104,0"
+                    Style="{StaticResource ButtonStyle}"/>
+            </Grid>
+
+
+            <StackPanel Margin="284,200,284,10" Width="250">
+                <Grid>
+                    <TextBox Name="UsernameInput" 
+                        Style="{StaticResource TextBoxStyle}"
+                        Height="45"
+                        Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"
+                        VerticalAlignment="Top"/>
+                    <TextBlock Text="Ime"
+                        Foreground="Gray"
+                        IsHitTestVisible="False"
+                        VerticalAlignment="Center"
+                        Margin="15,0,10,0"
+                        Visibility="{Binding Text.IsEmpty, ElementName=UsernameInput, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                </Grid>
+
+                <Button DockPanel.Dock="Top"
+                        Height="45"
+                        Content="Poveži se"
+                        Command="{Binding ToggleConnectionCommand}" 
+                        Click="ConnectButton_Click"
+                        Style="{StaticResource ButtonStyle}"
+                        HorizontalAlignment="Left"
+                        Background="#007AFF"
+                        Margin="0, 10, 0, 0" 
+                        Width="130"/>
+            </StackPanel>
+
+
+
+        </Grid>
+    </Border>
+</Page>

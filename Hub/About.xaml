@@ -1,0 +1,84 @@
+﻿<Page x:Class="Hub.About"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Hub"
+      mc:Ignorable="d" 
+      Height="550" 
+      Width="900"
+      Title="gLAsNik">
+
+    <Border BorderThickness="1" 
+            BorderBrush="#405A6A">
+
+        <Grid Background="#FFFFFF" Height="550">
+            <Button Content="✕" 
+                    Click="ExitButton_Click"
+                    Width="42" Height="42"
+                    FontSize="14"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Margin="0,20,20,0"
+                    Grid.Column="1"
+                    Style="{StaticResource ButtonStyle}"/>
+            <Button Content="—"
+                    Click="MinimizeButton_Click"
+                    Width="42" Height="42"
+                    FontSize="14"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Margin="0,20,104,0"
+                    Style="{StaticResource ButtonStyle}"/>
+            <Button Content="&lt;"
+                Click="BackButton_Click"
+                Width="42" Height="42"
+                Background="Transparent"
+                Foreground="#000"
+                FontSize="14"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Margin="0,20,62,0"
+                Style="{StaticResource ButtonStyle}"/>
+
+
+            <Grid Margin="40,40,40,40" Grid.ColumnSpan="2">
+                <StackPanel>
+                    <TextBlock Text="O projektu"
+                        HorizontalAlignment="Left"
+                        FontSize="32"
+                        FontWeight="Light"
+                        Foreground="#000"
+                        Margin="0,0,0,20"/>
+
+                    <TextBlock Margin="10,5,0,5">
+                        <Run FontWeight="Bold" Language="hr-hr" Text="Naziv aplikacije:"/>
+                        <Run Language="hr-hr" Text=" gLAsNik"/>
+                   </TextBlock>
+                    <TextBlock Margin="10,5,0,5">
+                        <Run FontWeight="Bold" Language="hr-hr" Text="Inačica:"/>
+                        <Run Language="hr-hr" Text=" 2.0.0 (lipanj 2025.)"/>
+                    </TextBlock>
+                    <TextBlock Margin="10,5,0,20">
+                        <Run FontWeight="Bold" Language="hr-hr" Text="Opis:"/>
+                        <Run Language="hr-hr" Text=" Alat za efektivnu komunikaciju i prijenos raznih datoteka između računala u LAN mreži"/>
+                    </TextBlock>
+                    
+                    <TextBlock Margin="10,5,0,5">
+                       <Run FontWeight="Bold" Language="hr-hr" Text="Autor:"/>
+                       <Run Language="hr-hr" Text=" Niko Josipović"/>
+                    </TextBlock>
+                    <TextBlock Margin="10,5,0,5">
+                        <Run FontWeight="Bold" Language="hr-hr" Text="Kontakt:"/>
+                        <Run Language="hr-hr" Text=" niko.josipovic3@skole.hr"/>
+                    </TextBlock>
+                    <TextBlock Margin="10,5,0,20">
+                        <Run FontWeight="Bold" Language="hr-hr" Text="Opis:"/>
+                        <Run Language="hr-hr" Text=" Učenik Tehničke škole Ruđera Boškovića"/>
+                    </TextBlock>
+                </StackPanel>
+            </Grid>
+
+        </Grid>
+    </Border>
+</Page>
