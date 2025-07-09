@@ -143,17 +143,17 @@
                                         <StackPanel>
                                             <StackPanel MouseDown="CopyTextMessage">
                                                 <TextBlock TextWrapping="Wrap"
-                                                    Foreground="#1d1160"
                                                     FontWeight="Bold"
                                                     Text="{Binding Title}">
                                                     <TextBlock.Style>
                                                         <Style TargetType="TextBlock">
+                                                            <Setter Property="TextBlock.Foreground" Value="#000080" />
                                                             <Style.Triggers>
                                                                 <DataTrigger Binding="{Binding IsDisconnected}" Value="True">
                                                                     <Setter Property="Foreground" Value="Red"/>
                                                                 </DataTrigger>
                                                                 <DataTrigger Binding="{Binding Title}" Value="Poslužitelj je prestao s radom.">
-                                                                    <Setter Property="Foreground" Value="DarkRed"/>
+                                                                    <Setter Property="Foreground" Value="#C6011F"/>
                                                                 </DataTrigger>
                                                             </Style.Triggers>
                                                         </Style>
@@ -161,7 +161,7 @@
                                                 </TextBlock>
 
                                                 <TextBlock TextWrapping="Wrap"
-                                                           Margin="5,0,0,0"
+                                                           Margin="5,5,0,0"
                                                            FontFamily="Consolas"
                                                            Foreground="Black"
                                                            Text="{Binding Text}"

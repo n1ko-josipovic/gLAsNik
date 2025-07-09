@@ -41,7 +41,7 @@ public partial class MainWindow : Window
         else
         {
             ServerButton.IsEnabled = true;
-            StatusText.Text = "Poslužitelja je potrebno pokrenuti.";
+            StatusText.Text = "Potrebno je pokrenuti poslužitelja.";
         }
     }
 

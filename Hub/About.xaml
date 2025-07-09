@@ -31,15 +31,13 @@
                     Margin="0,20,104,0"
                     Style="{StaticResource ButtonStyle}"/>
             <Button Content="&lt;"
-                Click="BackButton_Click"
-                Width="42" Height="42"
-                Background="Transparent"
-                Foreground="#000"
-                FontSize="14"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Top"
-                Margin="0,20,62,0"
-                Style="{StaticResource ButtonStyle}"/>
+                    Click="BackButton_Click"
+                    Width="42" Height="42"
+                    FontSize="14"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Margin="0,20,62,0"
+                    Style="{StaticResource ButtonStyle}"/>
 
 
             <Grid Margin="40,40,40,40" Grid.ColumnSpan="2">
@@ -57,11 +55,11 @@
                    </TextBlock>
                     <TextBlock Margin="10,5,0,5">
                         <Run FontWeight="Bold" Language="hr-hr" Text="Inačica:"/>
-                        <Run Language="hr-hr" Text=" 2.0.0 (lipanj 2025.)"/>
+                        <Run Language="hr-hr" Text=" 2.0.1 (srpanj 2025.)"/>
                     </TextBlock>
                     <TextBlock Margin="10,5,0,20">
                         <Run FontWeight="Bold" Language="hr-hr" Text="Opis:"/>
-                        <Run Language="hr-hr" Text=" Alat za efektivnu komunikaciju i prijenos raznih datoteka između računala u LAN mreži"/>
+                        <Run Language="hr-hr" Text=" Alat za učinkovitu komunikaciju i prijenos datoteka između računala povezanih na istu LAN mrežu."/>
                     </TextBlock>
                     
                     <TextBlock Margin="10,5,0,5">
